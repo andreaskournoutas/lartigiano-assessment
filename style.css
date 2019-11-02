@@ -3,15 +3,16 @@
     --green: #047940;
     --gray: #808080;
     --blue: #1E9CD7;
+    --darkblue: #0A1998;
 }
-.top-menu {
+.top-menu, .off-canvas {
     background-color: var(--red);
 }
 header {
-    border-bottom: 1px solid var(--green);
+    border-bottom: 32px solid var(--green);
 }
-.top-menu a, .top-menu button {
-    color: white;
+.top-menu a, .top-menu button, .off-canvas .close {
+    color: white !important;
 }
 .social a {
     color: white;
@@ -24,6 +25,7 @@ header {
 }
 main {
     max-height: 50vh;
+    overflow: hidden;
 }
 main img {
     object-fit: cover;
@@ -42,6 +44,40 @@ footer a {
     display: inline-block;
     padding-left: .5rem;
     padding-right: .5rem;
+}
+.logo-mobile {
+    max-width: 170px;
+}
+.logo-mobile-wrapper {
+    padding-top: .4rem;
+}
+.off-canvas {
+    width: 300px;
+    left: -310px;
+    transition: left 0.5s;
+}
+.off-canvas.active {
+    left: 0;
+    transition: left 0.5s;
+}
+.off-canvas a {
+    color: white;
+}
+.dark-layer {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    border: 5px solid var(--blue);
+    border-radius: 5px;
+}
+.blue-text {
+    color: var(--blue);
+}
+.darkblue-text {
+    color: var(--darkblue);
+}
+.dropdown-menu {
+    background-color: var(--red);
 }
 @media (min-width: 576px) {
     footer .left-menu {
